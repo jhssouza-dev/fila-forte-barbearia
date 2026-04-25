@@ -1,99 +1,116 @@
-import { ArrowRight, Scissors, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Scissors } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroBg from "@/assets/hero-barbershop.jpg";
 
 export const Hero = () => {
   return (
-    <section id="top" className="relative pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-      <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
+    <section id="top" className="relative min-h-[100svh] flex items-center pt-24 pb-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt=""
+          className="size-full object-cover opacity-50"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/85 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
+      </div>
+
       <div className="container relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
           <div className="max-w-xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-gold">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-xs font-medium text-gold backdrop-blur-sm">
               <span className="size-1.5 rounded-full bg-primary animate-pulse" />
               Fila digital para barbearias
             </span>
 
-            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
-              Acabe com a <span className="gradient-text-gold">bagunça da fila</span> da sua barbearia
+            <h1 className="mt-6 text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[0.95]">
+              Sua barbearia,
+              <br />
+              <span className="gradient-text-gold">sem fila bagunçada.</span>
             </h1>
 
-            <p className="mt-5 text-lg text-muted-foreground">
-              Cliente entra pelo QR Code, vê a posição dele e você chama o próximo num clique.
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
+              Cliente entra pelo QR Code, vê a posição. Você chama o próximo num clique.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button variant="gold" size="xl" className="group">
+            <div className="mt-10 flex flex-col sm:flex-row gap-3">
+              <Button variant="gold" size="xl" className="group shadow-gold">
                 Criar minha fila grátis
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
-              {["Sem app", "Sem cadastro do cliente", "Pronto em 2 min"].map((b) => (
-                <span key={b} className="inline-flex items-center gap-1.5">
-                  <CheckCircle2 className="size-4 text-gold" />
-                  {b}
-                </span>
-              ))}
-            </div>
+            <p className="mt-5 text-sm text-muted-foreground">
+              Grátis · Sem cartão · Pronto em 2 minutos
+            </p>
           </div>
 
-          {/* Painel mock */}
-          <div className="relative mx-auto w-full max-w-md">
-            <div className="rounded-2xl border border-border bg-surface shadow-card-dark p-5">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="grid place-items-center size-9 rounded-lg gradient-gold">
-                    <Scissors className="size-4 text-primary-foreground" />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold">Barbearia do Léo</p>
-                    <p className="text-xs text-muted-foreground">Fila ao vivo</p>
+          {/* Mockup celular cliente */}
+          <div className="relative mx-auto w-full max-w-sm hidden lg:block">
+            <div className="absolute -inset-8 bg-primary/20 blur-3xl rounded-full" />
+            <div className="relative rounded-[2.5rem] border border-border/80 bg-card p-3 shadow-2xl shadow-black/50">
+              <div className="rounded-[2rem] bg-background overflow-hidden">
+                {/* notch */}
+                <div className="h-6 flex items-center justify-center">
+                  <div className="h-1.5 w-20 rounded-full bg-border" />
+                </div>
+
+                <div className="px-5 pb-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="grid place-items-center size-8 rounded-lg gradient-gold">
+                        <Scissors className="size-3.5 text-primary-foreground" />
+                      </span>
+                      <p className="text-sm font-semibold">Barbearia do Léo</p>
+                    </div>
+                    <span className="size-1.5 rounded-full bg-primary animate-pulse" />
+                  </div>
+
+                  <div className="mt-8 text-center">
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground">Sua posição</p>
+                    <p className="mt-2 text-7xl font-extrabold gradient-text-gold leading-none">3º</p>
+                    <p className="mt-3 text-sm text-muted-foreground">tempo estimado</p>
+                    <p className="text-2xl font-bold mt-1">~ 25 min</p>
+                  </div>
+
+                  <div className="mt-8 space-y-2">
+                    {[
+                      { n: 1, name: "Lucas M.", now: true },
+                      { n: 2, name: "Pedro A." },
+                      { n: 3, name: "Você", you: true },
+                    ].map((c) => (
+                      <div
+                        key={c.n}
+                        className={`flex items-center gap-3 rounded-xl px-3 py-2.5 ${
+                          c.now
+                            ? "bg-primary/10 border border-primary/30"
+                            : c.you
+                            ? "bg-card border border-border"
+                            : "bg-card/40"
+                        }`}
+                      >
+                        <span
+                          className={`grid place-items-center size-7 rounded-lg text-xs font-bold ${
+                            c.now
+                              ? "bg-primary text-primary-foreground"
+                              : c.you
+                              ? "gradient-gold text-primary-foreground"
+                              : "bg-secondary"
+                          }`}
+                        >
+                          {c.n}
+                        </span>
+                        <p className={`text-sm flex-1 ${c.you ? "font-semibold" : ""}`}>{c.name}</p>
+                        {c.now && <span className="text-[10px] font-bold text-gold uppercase">na cadeira</span>}
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-1.5 text-xs text-gold">
-                  <span className="size-1.5 rounded-full bg-primary animate-pulse" />
-                  Ao vivo
-                </span>
               </div>
-
-              <div className="mt-5 space-y-2">
-                {[
-                  { n: 1, name: "Lucas M.", svc: "Corte + Barba", now: true },
-                  { n: 2, name: "Pedro A.", svc: "Corte" },
-                  { n: 3, name: "Rafa S.", svc: "Barba" },
-                  { n: 4, name: "Diego F.", svc: "Corte" },
-                ].map((c) => (
-                  <div
-                    key={c.n}
-                    className={`flex items-center justify-between rounded-xl border px-3 py-2.5 ${
-                      c.now ? "border-primary/50 bg-primary/10" : "border-border bg-card"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className={`grid place-items-center size-8 rounded-lg text-sm font-bold ${
-                        c.now ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground"
-                      }`}>
-                        {c.n}
-                      </span>
-                      <div>
-                        <p className="text-sm font-medium">{c.name}</p>
-                        <p className="text-xs text-muted-foreground">{c.svc}</p>
-                      </div>
-                    </div>
-                    {c.now ? (
-                      <span className="text-xs font-semibold text-gold">Na cadeira</span>
-                    ) : (
-                      <span className="text-xs text-muted-foreground">aguardando</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              <Button variant="gold" className="mt-4 w-full">
-                Chamar próximo
-                <ArrowRight className="size-4" />
-              </Button>
             </div>
           </div>
         </div>
