@@ -5,7 +5,6 @@ import logo from "@/assets/header-logo.svg";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
-  { href: "#beneficios", label: "Benefícios" },
   { href: "#features", label: "Recursos" },
   { href: "#faq", label: "FAQ" },
 ];

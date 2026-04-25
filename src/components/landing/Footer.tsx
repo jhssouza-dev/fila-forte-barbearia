@@ -18,7 +18,7 @@ export const Footer = () => {
             <p className="text-sm font-semibold mb-3">Produto</p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#como-funciona" className="hover:text-foreground">Como funciona</a></li>
-              <li><a href="#beneficios" className="hover:text-foreground">Benefícios</a></li>
+              <li><a href="#features" className="hover:text-foreground">Recursos</a></li>
               <li><a href="#faq" className="hover:text-foreground">FAQ</a></li>
             </ul>
           </div>
