@@ -1,6 +1,7 @@
-import { Scissors, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/header-logo.svg";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
@@ -15,13 +16,8 @@ export const Navbar = () => {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="grid place-items-center size-9 rounded-lg gradient-gold shadow-gold">
-            <Scissors className="size-5 text-primary-foreground" />
-          </span>
-          <span className="text-xl font-extrabold tracking-tight">
-            Fila<span className="text-gold">fy</span>
-          </span>
+        <a href="#top" className="flex items-center" aria-label="Filafy">
+          <img src={logo} alt="Filafy" className="h-8 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

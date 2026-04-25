@@ -1,4 +1,4 @@
-import { Scissors } from "lucide-react";
+import logo from "@/assets/header-logo.svg";
 
 export const Footer = () => {
   return (
@@ -6,13 +6,8 @@ export const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-10">
           <div>
-            <a href="#top" className="flex items-center gap-2">
-              <span className="grid place-items-center size-9 rounded-lg gradient-gold shadow-gold">
-                <Scissors className="size-5 text-primary-foreground" />
-              </span>
-              <span className="text-xl font-extrabold tracking-tight">
-                Fila<span className="text-gold">fy</span>
-              </span>
+            <a href="#top" className="flex items-center" aria-label="Filafy">
+              <img src={logo} alt="Filafy" className="h-9 w-auto" />
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Sistema para organizar a fila da sua barbearia sem papel, gritaria ou confusão.
