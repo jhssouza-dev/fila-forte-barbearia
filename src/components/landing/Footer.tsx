@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <a href="#top" className="flex items-center" aria-label="Filafy">
-              <img src={logo} alt="Filafy" className="h-9 w-auto" />
+              <img src={logo} alt="Filafy" className="h-9 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Sistema para organizar a fila da sua barbearia sem papel, gritaria ou confusão.
