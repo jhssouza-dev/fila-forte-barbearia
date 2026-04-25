@@ -17,7 +17,7 @@ export const Navbar = () => {
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
         <a href="#top" className="flex items-center" aria-label="Filafy">
-          <img src={logo} alt="Filafy" className="h-8 w-auto" />
+          <img src={logo} alt="Filafy" className="h-8 w-auto invert brightness-0" style={{ filter: "brightness(0) invert(1)" }} />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
