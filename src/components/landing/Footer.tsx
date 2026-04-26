@@ -4,10 +4,10 @@ export const Footer = () => {
   return (
     <footer className="border-t border-border/60 py-12">
       <div className="container">
-        <div className="grid md:grid-cols-3 gap-10">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="col-span-2 md:col-span-1">
             <a href="#top" className="flex items-center" aria-label="Filafy">
-              <img src={logo} alt="Filafy" className="h-9 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
+              <img src={logo} alt="Filafy" className="h-8 sm:h-9 w-auto" style={{ filter: "brightness(0) invert(1)" }} />
             </a>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Sistema para organizar a fila da sua barbearia sem papel, gritaria ou confusão.

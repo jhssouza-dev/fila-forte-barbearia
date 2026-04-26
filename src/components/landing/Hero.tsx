@@ -4,7 +4,7 @@ import heroBg from "@/assets/hero-barbershop.jpg";
 
 export const Hero = () => {
   return (
-    <section id="top" className="relative min-h-[100svh] flex items-center pt-24 pb-20 overflow-hidden">
+    <section id="top" className="relative flex items-center pt-24 pb-16 md:min-h-[100svh] md:pt-28 md:pb-20 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -20,37 +20,37 @@ export const Hero = () => {
       </div>
 
       <div className="container relative">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
-          <div className="max-w-xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-xs font-medium text-gold backdrop-blur-sm">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
+          <div className="max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-[11px] sm:text-xs font-medium text-gold backdrop-blur-sm">
               <span className="size-1.5 rounded-full bg-primary animate-pulse" />
               Fila digital para barbearias
             </span>
 
-            <h1 className="mt-6 text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[0.95]">
+            <h1 className="mt-5 text-[2.5rem] leading-[1] sm:text-6xl md:text-7xl font-extrabold tracking-tight">
               Sua barbearia,
               <br />
               <span className="gradient-text-gold">sem fila bagunçada.</span>
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
+            <p className="mt-5 text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Cliente entra pelo QR Code, vê a posição. Você chama o próximo num clique.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <Button variant="gold" size="xl" className="group shadow-gold">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:justify-center lg:justify-start">
+              <Button variant="gold" size="xl" className="group shadow-gold w-full sm:w-auto">
                 Criar minha fila grátis
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
 
-            <p className="mt-5 text-sm text-muted-foreground">
+            <p className="mt-4 text-xs sm:text-sm text-muted-foreground">
               Grátis · Sem cartão · Pronto em 2 minutos
             </p>
           </div>
 
           {/* Mockup celular cliente */}
-          <div className="relative mx-auto w-full max-w-sm hidden lg:block">
+          <div className="relative mx-auto w-full max-w-[300px] sm:max-w-sm mt-4 lg:mt-0">
             <div className="absolute -inset-8 bg-primary/20 blur-3xl rounded-full" />
             <div className="relative rounded-[2.5rem] border border-border/80 bg-card p-3 shadow-2xl shadow-black/50">
               <div className="rounded-[2rem] bg-background overflow-hidden">

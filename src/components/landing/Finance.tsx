@@ -2,12 +2,12 @@ import { TrendingUp } from "lucide-react";
 
 export const Finance = () => {
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-16 md:py-32">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="absolute -inset-8 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
-            <div className="relative rounded-3xl border border-border bg-card p-7 shadow-card-dark">
+            <div className="relative rounded-3xl border border-border bg-card p-5 sm:p-7 shadow-card-dark">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-wider text-muted-foreground">Resumo do dia</p>
@@ -19,14 +19,14 @@ export const Finance = () => {
                 </span>
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-3">
-                <div className="rounded-2xl border border-border bg-background/50 p-5">
+              <div className="mt-5 grid grid-cols-2 gap-3">
+                <div className="rounded-2xl border border-border bg-background/50 p-4 sm:p-5">
                   <p className="text-xs text-muted-foreground">Atendimentos</p>
-                  <p className="mt-2 text-4xl font-extrabold">27</p>
+                  <p className="mt-2 text-3xl sm:text-4xl font-extrabold">27</p>
                 </div>
-                <div className="rounded-2xl border border-primary/30 bg-primary/5 p-5">
+                <div className="rounded-2xl border border-primary/30 bg-primary/5 p-4 sm:p-5">
                   <p className="text-xs text-gold">Faturamento</p>
-                  <p className="mt-2 text-4xl font-extrabold gradient-text-gold">R$ 1.080</p>
+                  <p className="mt-2 text-2xl sm:text-4xl font-extrabold gradient-text-gold">R$ 1.080</p>
                 </div>
               </div>
 
@@ -54,12 +54,12 @@ export const Finance = () => {
 
           <div className="order-1 lg:order-2 max-w-lg">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Financeiro</span>
-            <h2 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
               Sem planilha.
               <br />
               <span className="gradient-text-gold">Sem conta de cabeça.</span>
             </h2>
-            <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
               Cada atendimento entra automaticamente no resumo. No fim do dia, você sabe exatamente quanto faturou.
             </p>
           </div>
