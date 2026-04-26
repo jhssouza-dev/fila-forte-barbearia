@@ -14,9 +14,9 @@ const faqs = [
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="py-16 md:py-20">
+    <section id="faq" className="py-16 md:py-24">
       <div className="container max-w-2xl">
-        <h2 className="text-center text-2xl md:text-4xl font-extrabold tracking-tight">
+        <h2 className="text-center text-3xl sm:text-4xl font-extrabold tracking-tight">
           Perguntas <span className="gradient-text-gold">frequentes</span>
         </h2>
 

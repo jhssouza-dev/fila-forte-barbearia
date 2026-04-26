@@ -2,22 +2,22 @@ import { ArrowRight, Scissors } from "lucide-react";
 
 export const Features = () => {
   return (
-    <section id="features" className="py-24 md:py-32 bg-surface border-y border-border/40">
+    <section id="features" className="py-16 md:py-32 bg-surface border-y border-border/40">
       <div className="container">
         <div className="max-w-2xl">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Recursos</span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
             Pensado para o <span className="gradient-text-gold">dia a dia da barbearia</span>
           </h2>
         </div>
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-6">
+        <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-5 md:gap-6">
           {/* Card 1 — Fila ao vivo (large) */}
-          <div className="lg:col-span-2 group relative overflow-hidden rounded-3xl border border-border bg-card p-8 md:p-10 hover:border-primary/40 transition-colors">
+          <div className="lg:col-span-2 group relative overflow-hidden rounded-3xl border border-border bg-card p-6 sm:p-8 md:p-10 hover:border-primary/40 transition-colors">
             <div className="absolute -top-32 -right-32 size-96 bg-primary/10 blur-3xl rounded-full pointer-events-none" />
-            <div className="relative grid lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
+            <div className="relative grid lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-10 items-center">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
                   Fila em tempo real
                 </h3>
                 <p className="mt-3 text-muted-foreground leading-relaxed">
@@ -26,7 +26,7 @@ export const Features = () => {
               </div>
 
               {/* Painel mockup */}
-              <div className="rounded-2xl border border-border bg-background/60 backdrop-blur-sm p-5 shadow-card-dark">
+              <div className="rounded-2xl border border-border bg-background/60 backdrop-blur-sm p-4 sm:p-5 shadow-card-dark">
                 <div className="flex items-center justify-between pb-3 border-b border-border/60">
                   <div className="flex items-center gap-2">
                     <span className="grid place-items-center size-8 rounded-lg gradient-gold">
@@ -77,7 +77,7 @@ export const Features = () => {
           </div>
 
           {/* Card 2 — QR Code */}
-          <div className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 hover:border-primary/40 transition-colors">
+          <div className="group relative overflow-hidden rounded-3xl border border-border bg-card p-6 sm:p-8 hover:border-primary/40 transition-colors">
             <h3 className="text-xl md:text-2xl font-bold tracking-tight">
               QR Code próprio da sua fila
             </h3>
@@ -85,7 +85,7 @@ export const Features = () => {
               Imprima, cole na parede ou compartilhe o link. Cliente entra na fila em segundos.
             </p>
 
-            <div className="mt-8 flex items-center justify-center">
+            <div className="mt-6 sm:mt-8 flex items-center justify-center">
               <div className="relative">
                 <div className="absolute -inset-6 bg-primary/15 blur-2xl rounded-full" />
                 <div className="relative rounded-2xl bg-background border border-border p-5">
@@ -116,7 +116,7 @@ export const Features = () => {
           </div>
 
           {/* Card 3 — Cliente vê posição */}
-          <div className="group relative overflow-hidden rounded-3xl border border-border bg-card p-8 hover:border-primary/40 transition-colors">
+          <div className="group relative overflow-hidden rounded-3xl border border-border bg-card p-6 sm:p-8 hover:border-primary/40 transition-colors">
             <h3 className="text-xl md:text-2xl font-bold tracking-tight">
               Cliente vê quanto falta
             </h3>
@@ -124,14 +124,14 @@ export const Features = () => {
               Posição e tempo estimado em tempo real. Ele decide se espera ou volta depois.
             </p>
 
-            <div className="mt-8 flex items-end justify-center gap-2">
-              <div className="text-center px-6 py-5 rounded-2xl bg-background border border-border">
+            <div className="mt-6 sm:mt-8 flex items-end justify-center gap-2">
+              <div className="text-center px-5 sm:px-6 py-4 sm:py-5 rounded-2xl bg-background border border-border">
                 <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Posição</p>
-                <p className="mt-1 text-4xl font-extrabold gradient-text-gold leading-none">3º</p>
+                <p className="mt-1 text-3xl sm:text-4xl font-extrabold gradient-text-gold leading-none">3º</p>
               </div>
-              <div className="text-center px-6 py-5 rounded-2xl bg-background border border-primary/30 shadow-gold">
+              <div className="text-center px-5 sm:px-6 py-4 sm:py-5 rounded-2xl bg-background border border-primary/30 shadow-gold">
                 <p className="text-[10px] uppercase tracking-wider text-gold">Estimado</p>
-                <p className="mt-1 text-4xl font-extrabold leading-none">25<span className="text-lg text-muted-foreground">min</span></p>
+                <p className="mt-1 text-3xl sm:text-4xl font-extrabold leading-none">25<span className="text-base sm:text-lg text-muted-foreground">min</span></p>
               </div>
             </div>
           </div>
