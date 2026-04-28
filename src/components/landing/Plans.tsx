@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+
 
 export const Plans = () => {
   return (
@@ -27,9 +27,6 @@ export const Plans = () => {
               </div>
             </div>
 
-            <div className="mt-8">
-              <Button variant="gold" size="xl" className="w-full sm:w-auto">Teste grátis</Button>
-            </div>
           </div>
 
           <div className="relative">
