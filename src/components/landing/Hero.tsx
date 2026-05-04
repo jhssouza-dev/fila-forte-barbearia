@@ -27,21 +27,24 @@ export const Hero = () => {
               Fila digital para barbearias
             </span>
 
-            <h1 className="mt-5 text-[2.5rem] leading-[1] sm:text-6xl md:text-7xl font-extrabold tracking-tight">
-              Sua barbearia,
+            <h1 className="mt-5 text-[2rem] leading-[1.05] sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+              Você não precisa de mais clientes.
               <br />
-              <span className="gradient-text-gold">sem fila bagunçada.</span>
+              <span className="gradient-text-gold">Precisa organizar os que já tem.</span>
             </h1>
 
             <p className="mt-5 text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Cliente entra pelo QR Code, vê a posição. Você chama o próximo num clique.
+              O Filafy organiza sua barbearia inteira — fila, agendamentos e clientes — automaticamente.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:justify-center lg:justify-start">
               <Button variant="gold" size="xl" className="group shadow-gold w-full sm:w-auto">
-                Criar minha fila grátis
+                Testar grátis
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </Button>
+              <a href="#como-funciona" className="inline-flex items-center justify-center gap-2 rounded-xl border border-border h-14 px-6 text-base font-semibold hover:border-primary/40 transition-colors">
+                Ver como funciona
+              </a>
             </div>
 
             <p className="mt-4 text-xs sm:text-sm text-muted-foreground">
