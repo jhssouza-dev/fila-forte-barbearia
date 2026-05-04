@@ -19,16 +19,18 @@ export const CTA = () => {
           <div className="absolute inset-0 bg-hero-glow pointer-events-none" />
 
           <div className="relative px-6 sm:px-8 md:px-16 py-12 sm:py-16 md:py-24 max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
-              Sua fila <span className="gradient-text-gold">organizada</span> hoje.
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05]">
+              Ou você <span className="gradient-text-gold">organiza</span> sua barbearia,
+              <br />
+              ou continua perdendo cliente.
             </h2>
             <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-md">
-              Crie sua conta agora e tenha sua primeira fila pronta em 2 minutos.
+              Em 2 minutos seu sistema está rodando. Sem cartão, sem complicação.
             </p>
 
             <div className="mt-8">
               <Button variant="gold" size="xl" className="group shadow-gold w-full sm:w-auto">
-                Criar minha fila grátis
+                Começar grátis agora
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <p className="mt-4 text-xs text-muted-foreground">
