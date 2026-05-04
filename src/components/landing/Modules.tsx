@@ -1,115 +1,93 @@
-import dashboard from "@/assets/app-dashboard.png";
-import atendimentos from "@/assets/app-atendimentos.png";
-import agenda from "@/assets/app-agenda.png";
-import qrcode from "@/assets/app-qrcode.png";
-import historico from "@/assets/app-historico.png";
+import { BarChart3, Calendar, LayoutGrid, QrCode, Settings, Users, CreditCard } from "lucide-react";
 
-type Mod = {
-  tag: string;
-  title: string;
-  desc: string;
-  bullets: string[];
-  punch?: string;
-  img: string;
-  reverse?: boolean;
-};
-
-const modules: Mod[] = [
+const modules = [
   {
-    tag: "Atendimentos",
-    title: "A tela principal da barbearia",
-    desc: "Botão único: Atender próximo. Fila e agendamento integrados, decisão final na sua mão.",
-    bullets: ["Fila + agenda no mesmo painel", "Múltiplos barbeiros simultâneos", "Controle total do fluxo"],
-    punch: "O sistema sugere. Você decide.",
-    img: atendimentos,
-  },
-  {
+    icon: BarChart3,
     tag: "Estatísticas",
-    title: "Sua barbearia em tempo real",
-    desc: "Faturamento do dia, ticket médio, atendimentos e equipe online numa tela só.",
-    bullets: ["Faturamento ao vivo", "Ticket médio automático", "Comparativo com ontem"],
-    img: dashboard,
-    reverse: true,
+    title: "Veja o desempenho da barbearia",
+    desc: "Acompanhe atendimentos, histórico e faturamento para entender o que está acontecendo no negócio.",
   },
   {
+    icon: LayoutGrid,
+    tag: "Atendimentos",
+    title: "O centro da operação",
+    desc: "Fila e agendamentos numa visão inteligente. O barbeiro sabe quem atender agora.",
+    featured: true,
+  },
+  {
+    icon: Calendar,
     tag: "Agendamentos",
-    title: "Agenda inteligente, sem bagunça",
-    desc: "Calendário visual moderno com horários disponíveis automáticos. Zero conflito.",
-    bullets: ["Calendário visual por dia", "Conflito impossível", "Integrado com a fila"],
-    img: agenda,
+    title: "Agenda visual e sem conflito",
+    desc: "Horários disponíveis, calendário por dia e controle sem bagunçar a fila.",
   },
   {
+    icon: Users,
+    tag: "Barbeiros",
+    title: "Controle da equipe",
+    desc: "Ative, pause ou desative barbeiros conforme a operação do dia.",
+  },
+  {
+    icon: QrCode,
     tag: "QR Code",
     title: "Entrada simples para o cliente",
-    desc: "Imprime, cola na parede. Cliente escaneia, entra na fila ou agenda. Sem app.",
-    bullets: ["QR pronto pra imprimir", "Link público da loja", "Sem cadastro complicado"],
-    img: qrcode,
-    reverse: true,
+    desc: "Basta escanear para entrar na fila ou agendar horário.",
   },
   {
-    tag: "Histórico & Relatórios",
-    title: "Tudo registrado, nada esquecido",
-    desc: "Cada atendimento salvo. Baixe o relatório do dia, semana ou mês quando quiser.",
-    bullets: ["Histórico completo", "Relatório em um clique", "Por barbeiro e serviço"],
-    img: historico,
+    icon: CreditCard,
+    tag: "Planos & Assinaturas",
+    title: "Receita recorrente",
+    desc: "Crie planos mensais. O sistema reconhece o cliente e desconta o uso automaticamente.",
+  },
+  {
+    icon: Settings,
+    tag: "Configurações",
+    title: "Regras do seu jeito",
+    desc: "Defina horários, serviços, duração, preços e modo de atendimento.",
   },
 ];
 
 export const Modules = () => {
   return (
-    <section id="features" className="py-16 md:py-32">
+    <section id="features" className="py-20 md:py-32">
       <div className="container">
         <div className="max-w-2xl">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">O sistema completo</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            Tudo que sua barbearia precisa, <span className="gradient-text-gold">num lugar só</span>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Funcionalidades</span>
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1]">
+            Tudo que a barbearia precisa
+            <br />
+            <span className="gradient-text-gold">para atender melhor.</span>
           </h2>
         </div>
 
-        <div className="mt-12 md:mt-20 space-y-20 md:space-y-32">
-          {modules.map((m) => (
-            <div
-              key={m.tag}
-              className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-                m.reverse ? "lg:[&>*:first-child]:order-2" : ""
-              }`}
-            >
-              <div className="max-w-lg">
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-gold">{m.tag}</span>
-                <h3 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
-                  {m.title}
-                </h3>
-                <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  {m.desc}
-                </p>
-                <ul className="mt-6 space-y-2.5">
-                  {m.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-3 text-sm sm:text-base">
-                      <span className="mt-1.5 size-1.5 rounded-full bg-gold shrink-0" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-                {m.punch && (
-                  <p className="mt-6 text-lg font-bold gradient-text-gold">
-                    “{m.punch}”
-                  </p>
-                )}
-              </div>
-
-              <div className="relative mx-auto w-full max-w-[320px] sm:max-w-sm">
-                <div className="absolute -inset-10 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
-                <div className="relative rounded-[2rem] border border-border/80 bg-card p-2 shadow-2xl shadow-black/60">
-                  <img
-                    src={m.img}
-                    alt={m.title}
-                    loading="lazy"
-                    className="w-full h-auto rounded-[1.6rem]"
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {modules.map((m) => {
+            const Icon = m.icon;
+            return (
+              <div
+                key={m.tag}
+                className={`group relative rounded-2xl border p-6 sm:p-7 transition-all hover:-translate-y-1 ${
+                  m.featured
+                    ? "border-primary/30 bg-primary/5 shadow-gold sm:row-span-2 sm:col-span-1 lg:col-span-1"
+                    : "border-border bg-card hover:border-primary/30"
+                }`}
+              >
+                <div
+                  className={`grid place-items-center size-11 rounded-xl ${
+                    m.featured ? "gradient-gold" : "bg-primary/10"
+                  }`}
+                >
+                  <Icon
+                    className={`size-5 ${m.featured ? "text-primary-foreground" : "text-gold"}`}
                   />
                 </div>
+                <p className={`mt-5 text-xs font-bold uppercase tracking-[0.15em] ${m.featured ? "text-gold" : "text-muted-foreground"}`}>
+                  {m.tag}
+                </p>
+                <p className="mt-2 text-lg font-bold">{m.title}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
