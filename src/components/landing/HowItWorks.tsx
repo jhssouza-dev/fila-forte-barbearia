@@ -1,4 +1,4 @@
-import qrcode from "@/assets/app-qrcode.png";
+import filaPublica from "@/assets/app-fila-publica.png";
 
 const steps = [
   {
@@ -33,7 +33,7 @@ export const HowItWorks = () => {
             <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
             <div className="relative rounded-[2rem] border border-border bg-card p-2 shadow-2xl shadow-black/70">
               <img
-                src={qrcode}
+                src={filaPublica}
                 alt="Tela pública do cliente"
                 className="w-full h-auto rounded-[1.6rem]"
               />
