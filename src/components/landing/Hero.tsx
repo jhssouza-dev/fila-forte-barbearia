@@ -56,10 +56,10 @@ export const Hero = () => {
         <div className="relative mt-16 md:mt-24 mx-auto max-w-5xl">
           <div className="absolute -inset-x-20 -inset-y-10 bg-primary/15 blur-[100px] rounded-full pointer-events-none" />
 
-          <div className="relative grid grid-cols-3 gap-3 sm:gap-6 items-end">
+          <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-end max-w-[280px] sm:max-w-none mx-auto">
             {/* Left mockup */}
-            <div className="relative translate-y-6 sm:translate-y-10 opacity-90">
-              <div className="rounded-[1.4rem] border border-border/80 bg-card p-1.5 shadow-2xl shadow-black/70 rotate-[-4deg]">
+            <div className="relative sm:translate-y-10 opacity-90 hidden sm:block">
+              <div className="rounded-[1.4rem] border border-border/80 bg-card p-1.5 shadow-2xl shadow-black/70 sm:rotate-[-4deg]">
                 <img
                   src={filaPublica}
                   alt="Tela pública do cliente Filafy"
@@ -81,8 +81,8 @@ export const Hero = () => {
             </div>
 
             {/* Right mockup */}
-            <div className="relative translate-y-6 sm:translate-y-10 opacity-90">
-              <div className="rounded-[1.4rem] border border-border/80 bg-card p-1.5 shadow-2xl shadow-black/70 rotate-[4deg]">
+            <div className="relative sm:translate-y-10 opacity-90 hidden sm:block">
+              <div className="rounded-[1.4rem] border border-border/80 bg-card p-1.5 shadow-2xl shadow-black/70 sm:rotate-[4deg]">
                 <img
                   src={agenda}
                   alt="Tela Agenda do Filafy"
