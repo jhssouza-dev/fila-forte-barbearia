@@ -62,10 +62,6 @@ export const HowItWorks = () => {
               ))}
             </div>
 
-            <p className="mt-10 text-base font-semibold text-foreground">
-              Menos dúvida para o cliente.{" "}
-              <span className="gradient-text-gold">Menos interrupção para o barbeiro.</span>
-            </p>
           </div>
         </div>
       </div>

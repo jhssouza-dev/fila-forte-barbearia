@@ -39,9 +39,6 @@ export const Benefits = () => {
               ))}
             </ul>
 
-            <p className="mt-8 text-lg font-bold gradient-text-gold leading-snug">
-              Uma barbearia organizada atende melhor, vende melhor e perde menos.
-            </p>
           </div>
         </div>
       </div>

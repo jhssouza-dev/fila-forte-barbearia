@@ -56,9 +56,6 @@ export const Modes = () => {
           })}
         </div>
 
-        <p className="mt-10 text-base sm:text-lg font-semibold">
-          O Filafy se adapta à barbearia — <span className="gradient-text-gold">não o contrário.</span>
-        </p>
       </div>
     </section>
   );

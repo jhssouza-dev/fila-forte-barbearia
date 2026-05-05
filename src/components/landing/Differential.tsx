@@ -1,10 +1,10 @@
 import atendimentos from "@/assets/app-atendimentos.png";
 
 const timeline = [
-  { time: "09:00", label: "Cliente da fila", type: "fila" },
+  { time: "09:00", label: "Próximo atendimento", type: "next" },
   { time: "09:30", label: "Cliente da fila", type: "fila" },
   { time: "10:30", label: "Agendamento", type: "agenda" },
-  { time: "11:00", label: "Próximo atendimento", type: "next" },
+  { time: "11:00", label: "Cliente da fila", type: "fila" },
 ];
 
 export const Differential = () => {
@@ -20,14 +20,14 @@ export const Differential = () => {
               Fila e agendamento <span className="gradient-text-gold">trabalhando juntos</span> — do jeito certo.
             </h2>
             <p className="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
-              No Filafy, agendamento não fica separado da fila. O sistema calcula o fluxo do dia considerando serviços, duração, barbeiros e atendimentos em andamento.
+              Fila e agenda numa única visão. O sistema sugere quem atender agora — você decide.
             </p>
 
             <ul className="mt-8 space-y-3">
               {[
-                "A fila continua sendo fila.",
-                "O agendamento continua sendo agendamento.",
-                "A tela Atendimentos junta tudo numa visão inteligente.",
+                "Próximo atendimento sempre claro.",
+                "Sem conflito entre fila e horário marcado.",
+                "Operação fluindo num botão só.",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3">
                   <span className="mt-1.5 size-1.5 rounded-full bg-gold shrink-0" />
