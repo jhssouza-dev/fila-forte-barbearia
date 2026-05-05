@@ -18,9 +18,6 @@ export const Plans = () => {
               Transforme clientes frequentes em
               <span className="gradient-text-gold"> receita previsível.</span>
             </h2>
-            <p className="mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Com planos e assinaturas, a barbearia para de depender apenas de atendimentos avulsos.
-            </p>
 
             <div className="mt-8 space-y-3">
               {plans.map((p) => (
@@ -43,9 +40,9 @@ export const Plans = () => {
             </div>
 
             <p className="mt-8 text-base sm:text-lg font-semibold leading-relaxed">
-              Quando o cliente chega, o Filafy identifica o plano ativo, aplica o uso e cobra apenas o que for extra.
+              O sistema reconhece o plano, aplica o uso e cobra só o extra.
               <br />
-              <span className="gradient-text-gold">Menos controle manual. Mais recorrência.</span>
+              <span className="gradient-text-gold">Mais recorrência. Menos controle manual.</span>
             </p>
           </div>
 

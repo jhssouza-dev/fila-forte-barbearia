@@ -27,9 +27,6 @@ export const Problem = () => {
             Sua barbearia perde dinheiro quando o cliente
             <span className="text-muted-foreground"> não entende a espera.</span>
           </h2>
-          <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl">
-            Quando a fila está no papel, no WhatsApp ou só na cabeça do barbeiro, ninguém sabe exatamente o que está acontecendo.
-          </p>
         </div>
 
         <div className="mt-12 grid sm:grid-cols-2 gap-4">
@@ -51,10 +48,6 @@ export const Problem = () => {
           ))}
         </div>
 
-        <p className="mt-10 text-lg sm:text-xl font-semibold max-w-2xl">
-          Desorganização não parece custo. Mas{" "}
-          <span className="gradient-text-gold">tira dinheiro da barbearia todos os dias.</span>
-        </p>
       </div>
     </section>
   );
