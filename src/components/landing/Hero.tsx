@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import atendimentos from "@/assets/app-atendimentos.png";
 import agenda from "@/assets/app-agenda.png";
-import qrcode from "@/assets/app-qrcode.png";
+import filaPublica from "@/assets/app-fila-publica.png";
 
 export const Hero = () => {
   return (
@@ -61,8 +61,8 @@ export const Hero = () => {
             <div className="relative translate-y-6 sm:translate-y-10 opacity-90">
               <div className="rounded-[1.4rem] border border-border/80 bg-card p-1.5 shadow-2xl shadow-black/70 rotate-[-4deg]">
                 <img
-                  src={qrcode}
-                  alt="Tela do cliente Filafy"
+                  src={filaPublica}
+                  alt="Tela pública do cliente Filafy"
                   className="w-full h-auto rounded-[1.1rem]"
                 />
               </div>
